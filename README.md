@@ -1,3 +1,3 @@
 # dbt-snowflake
 
-![img](artifacts/images/flow.jpg)
+![img](/artifacts/images/flow.jpg)
