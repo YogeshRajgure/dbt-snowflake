@@ -49,3 +49,20 @@ models:
         tests:
           - accepted_values:
               values: ['t', 'f']
+
+  - name: fct_reviews
+    columns:
+      - name: listing_id
+        tests:
+          - relationships:
+              to: ref('dim_listing_cleansed')
+              field: listing_id
+
+      - name: reviewer_name
+        tests:
+          - not_null
+      
+      - name: review_sentiment
+        tests:
+          - accepted_values:
+              values: ['positive', 'neutral', 'negative']
